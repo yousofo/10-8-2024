@@ -62,6 +62,7 @@
   font-size: 16px;
 }
 .cybersecurity-bootcamp header .right .title h2 {
+  line-height: 1;
   background-color: #f5bd2d;
   width: -moz-fit-content;
   width: fit-content;
@@ -178,15 +179,23 @@
   overflow: hidden;
 }
 .cybersecurity-bootcamp main .sections > section {
+  margin: 0 auto;
   padding: 40px;
+  padding-left: 100px;
   position: relative;
   border-radius: 100px;
   border: 1px solid transparent;
   border-bottom: 0;
 }
+@media screen and (min-width: 1024px) {
+  .cybersecurity-bootcamp main .sections > section {
+    width: calc(100% - 200px);
+  }
+}
 @media screen and (min-width: 640px) {
   .cybersecurity-bootcamp main .sections > section {
     padding: 50px;
+    padding-left: 100px;
   }
 }
 .cybersecurity-bootcamp main .sections > section > h4 {
@@ -218,6 +227,28 @@
   position: absolute;
   border-radius: 100px;
   height: 100%;
+}
+.cybersecurity-bootcamp main .sections > section .section-img {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  left: 0;
+  top: 50%;
+  display: none;
+  align-items: center;
+  border: 1px solid #9a20aa;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #161521;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1024px) {
+  .cybersecurity-bootcamp main .sections > section .section-img {
+    display: flex;
+  }
+}
+.cybersecurity-bootcamp main .sections > section .section-img img {
+  width: 100%;
 }
 .cybersecurity-bootcamp main .sections > section:nth-child(odd):not(:first-child) .double-arrow {
   display: block;
