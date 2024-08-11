@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@property --p {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 10%;
+}
 .cybersecurity-bootcamp {
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
@@ -127,8 +132,9 @@
   color: white;
   font-size: 16px;
   margin: 0 auto;
-  padding: 10px 30px;
-  border-radius: 10px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 25px;
 }
 @media screen and (min-width: 640px) {
   .cybersecurity-bootcamp main > .title h3 {
@@ -253,6 +259,7 @@
 .cybersecurity-bootcamp main .sections > section:nth-child(odd):not(:first-child) .double-arrow {
   display: block;
   transform: scaleX(-1) translate(-50%, -50%);
+  animation: moveAlongBorder 5s 3s linear infinite;
 }
 .cybersecurity-bootcamp main .sections > section:nth-child(odd)::before {
   width: 50%;
@@ -265,6 +272,7 @@
 }
 .cybersecurity-bootcamp main .sections > section:nth-of-type(even) .double-arrow {
   display: block;
+  animation: moveAlongBorder2 5s ease-in-out infinite;
 }
 .cybersecurity-bootcamp main .sections > section:nth-of-type(even)::before {
   width: calc(100% - 100px);
@@ -407,7 +415,8 @@
   width: fit-content;
   border-radius: 50px;
   border: 0;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 500;
   padding: 10px 50px;
   height: -moz-fit-content;
   height: fit-content;
@@ -459,4 +468,35 @@
 }
 .cybersecurity-bootcamp .mb-20 {
   padding-bottom: 80px;
+}
+
+@keyframes moveAlongBorder {
+  0% {
+    width: 0;
+    top: 0;
+    left: calc(100% - 100px);
+  }
+  20%, 80% {
+    width: 25px;
+  }
+  100% {
+    width: 0px;
+    top: 0;
+    left: 100px;
+  }
+}
+@keyframes moveAlongBorder2 {
+  0% {
+    top: 0;
+    width: 0;
+    right: calc(100% - 100px);
+  }
+  20%, 80% {
+    width: 25px;
+  }
+  100% {
+    width: 0;
+    top: 0;
+    right: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */
