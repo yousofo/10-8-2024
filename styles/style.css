@@ -226,6 +226,7 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 0;
 }
 .cybersecurity-bootcamp main .sections > section::after, .cybersecurity-bootcamp main .sections > section::before {
   content: "";
