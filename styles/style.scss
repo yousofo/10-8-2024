@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .cybersecurity-bootcamp {
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
@@ -210,7 +209,7 @@
           border-radius: 100px;
           height: 100%;
         }
-        .section-img{
+        .section-img {
           position: absolute;
           width: 140px;
           height: 140px;
@@ -221,7 +220,7 @@
             display: flex;
           }
           align-items: center;
-          img{
+          img {
             width: 100%;
           }
           border: 1px solid #9a20aa;
@@ -294,6 +293,29 @@
             width: 40px;
           }
         }
+        > div:nth-last-child(1) {
+          position: relative;
+          @media screen and (max-width: 400px) {
+            > p {
+              position: absolute;
+              margin-top: 0px !important;
+              left: -5px;
+              width: 200px;
+              
+              transform: translateX(-100%);
+            }
+          }
+          @media screen and (min-width: 640px) {
+            width: max-content;
+          }
+          >div{
+            white-space: nowrap;
+          }
+          > p {
+            margin-top: 15px;
+            color: #f5bd2d;
+          }
+        }
       }
       > div:nth-child(2) {
         display: flex;
@@ -307,7 +329,7 @@
             padding-left: 60px;
             white-space: nowrap;
             position: relative;
-            img{
+            img {
               position: absolute;
               width: 40px;
               bottom: 17px;
@@ -375,7 +397,7 @@
     object-fit: cover;
     z-index: -1;
   }
-  >.popup-form-result{
+  > .popup-form-result {
     width: 100%;
     max-width: 500px;
     position: fixed;
@@ -386,7 +408,7 @@
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -394,10 +416,10 @@
     justify-content: center;
     font-weight: bold;
     color: #333333;
-    .success-logo{
+    .success-logo {
       width: 200px;
     }
-    #closePopup{
+    #closePopup {
       width: 25px;
       left: 20px;
       cursor: pointer;

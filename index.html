@@ -173,6 +173,7 @@
               <p>حجز المقعد</p>
               <p><bdi>100 ريــــال</bdi></p>
             </div>
+            <p>(يتم استكمال باقي مبلغ المعسكر بعد حضور أول محاضرة)</p>
           </div>
         </div>
         <div>
@@ -232,12 +233,14 @@
         </div>
       </form>
     </main>
+    <!-- POPUP -->
     <div class="popup-form-result">
       <img id="closePopup" src="./assets/close-popup@2x.png" alt="" />
       <img class="success-logo" src="./assets/success-logo@2x.png" alt="" />
       <p>تم التسجيل بنجاح</p>
       <small>جاري تحويلك لاستكمال الحجز...</small>
     </div>
+    <!-- background -->
     <img class="background" src="./assets/background.png" alt="" />
     <script>
       const noCacheHeaders = {
@@ -310,33 +313,33 @@
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
         try {
-          // TODO: uncomment 
+          TODO: uncomment 
 
-          // const result = await fetchWithCheck(
-          //   "http://myserverhost-001-site2.dtempurl.com/api/Camps",
-          //   null,
-          //   {
-          //     method: "POST",
-          //     body: {
-          //       id: 0, // TODO: fix this
-          //       name: name,
-          //       email: email,
-          //       education: education,
-          //       phoneNumber: phone,
-          //       typeCourse: attendance,
-          //       createdCode: new Date().toISOString(), // TODO: fix this
-          //     },
-          //   }
-          // );
-          // console.log(result);
+          const result = await fetchWithCheck(
+            "https://kh.abadnet.com.sa/api/Camps",
+            null,
+            {
+              method: "POST",
+              body: {
+                id: 0, // TODO: fix this
+                name: name,
+                email: email,
+                education: education,
+                phoneNumber: phone,
+                typeCourse: attendance,
+                createdCode: new Date().toISOString(), // TODO: fix this
+              },
+            }
+          );
+          console.log(result);
 
           //DEVELOPMENT only
           // TODO: remove this 
-          const devResult =await new Promise((res, rej) => {
-            setTimeout(() => {
-              res("https://www.google.com/");
-            }, 2000);
-          });
+          // const devResult =await new Promise((res, rej) => {
+          //   setTimeout(() => {
+          //     res("https://www.google.com/");
+          //   }, 2000);
+          // });
 
           resultPopup.style.display = "flex";
           const redirectTimeOut = setTimeout(() => {
