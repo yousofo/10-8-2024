@@ -249,6 +249,7 @@
         "Surrogate-Control": "no-store",
       };
 
+      //custom fetch function with error handling
       async function fetchWithCheck(url, isJson, options = {}, fallBack) {
         try {
           const response = await fetch(url, {
@@ -297,8 +298,9 @@
       }
 
       const form = document.querySelector("form");
-      const closePopup = document.querySelector("#closePopup");
       const resultPopup = document.querySelector(".popup-form-result");
+
+      //FORM SUBMISSION
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -328,8 +330,8 @@
           // );
           // console.log(result);
 
-          //DEV RETURN
-          // TODO: delete this 
+          //DEVELOPMENT only
+          // TODO: remove this 
           const devResult =await new Promise((res, rej) => {
             setTimeout(() => {
               res("https://www.google.com/");
@@ -346,8 +348,11 @@
           console.log(err);
         }
       });
+      
+      
+      const closePopupBtn = document.querySelector("#closePopup");
 
-      closePopup.addEventListener("click", () => {
+      closePopupBtn.addEventListener("click", () => {
         resultPopup.style.display = "none";
       });
     </script>
