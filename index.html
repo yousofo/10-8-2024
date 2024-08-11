@@ -57,6 +57,80 @@
             <img src="./assets/comptia.png" alt="" />
           </div>
         </section>
+        <section>
+          <h4><bdi>دورة +CompTIA Security</bdi></h4>
+          <ul>
+            <li>مفاهيم الأمن السيبراني الرئيسية</li>
+            <li>
+              الاستجابة للتهديدات الشائعة والهجمات الإلكترونية ونقاط الضعف
+              والحوادث الأمنية
+            </li>
+            <li>
+              الآثار الأمنية لنماذج البنية المختلفة، ومبادئ تأمين البنية التحتية
+              ، واستراتيجيات حماية البيانات
+            </li>
+            <li>
+              تطبيق وتعزيز تقنيات إدارة الأمان والثغرات الأمنية، بالإضافة إلى
+              الآثار الأمنية المترتبة على إدارة الأجهزة والبرامج والبيانات
+              المناسبة.
+            </li>
+            <li>
+              إعداد التقارير والاتصال المطلوبة للأدوار الوظيفية لـ Security+
+              المتعلقة بالحوكمة وإدارة المخاطر والامتثال والتقييم والوعي الأمني
+            </li>
+          </ul>
+          <img class="double-arrow" src="./assets/double-arrow.png" alt="" />
+          <div class="section-img">
+            <img src="./assets/security@2x.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4><bdi>دورة +CompTIA Linux</bdi></h4>
+          <ul>
+            <li>عمليات تثبيت البرامج والتكوينات والتحديثات والإزالة.</li>
+            <li>إدارة المستخدمين والمجموعات.</li>
+            <li>إنشاء الملفات وتعديلها وإعادة توجيهها.</li>
+            <li>إدارة الخدمات وإدارة النظام.</li>
+            <li>تنفيذ وتكوين جدار الحماية لنظام لينكس.</li>
+            <li>النسخ الاحتياطي، والاستعادة، وضغط الملفات</li>
+          </ul>
+          <img class="double-arrow" src="./assets/double-arrow.png" alt="" />
+          <div class="section-img">
+            <img src="./assets/linux@2x.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4><bdi>دورة eJPT - Junior Penetration Tester</bdi></h4>
+          <ul>
+            <li>تحديد المنافذ والخدمات المفتوحة على الهدف</li>
+            <li>تحديد نظام التشغيل للهدف</li>
+            <li>جمع معلومات الشبكة من الملفات الموجودة على الهدف</li>
+            <li>جمع معلومات حساب المستخدم على الهدف</li>
+            <li>تحديد وتعديل عمليات استغلال الثغرات</li>
+            <li>إجراء الاستغلال الثغرات باستخدام Metasploit</li>
+            <li>تحديد موقع الملفات المخفية</li>
+            <li>كسر تشفير كلمات المرور للمواقع</li>
+            <li>جمع معلومات واستغلال ثغرات مواقع الويب</li>
+          </ul>
+          <img class="double-arrow" src="./assets/double-arrow.png" alt="" />
+          <div class="section-img">
+            <img src="./assets/ejpt@2x.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4><bdi>Blue Team Level دورة 1</bdi></h4>
+          <ul>
+            <li>تحليل هجمات التصيد والرد عليها</li>
+            <li>إجراء تحقيقات الرقمية لجمع وتحليل الأدلة الرقمية</li>
+            <li>استخدام منصة SIEM للتحقيق في الأنشطة الضارة</li>
+            <li>تحليل السجل وحركة مرور الشبكة بما في ذلك البرامج الضارة</li>
+            <li>إجراء بحث عن الجهات التهديدية</li>
+          </ul>
+          <img class="double-arrow" src="./assets/double-arrow.png" alt="" />
+          <div class="section-img">
+            <img src="./assets/blue-team@2x.png" alt="" />
+          </div>
+        </section>
       </div>
       <!--  -->
       <div class="title last">
@@ -104,7 +178,10 @@
         <div>
           <h4>سعر المعسكر</h4>
           <ul>
-            <li><bdi>7935 ريال</bdi></li>
+            <li>
+              <img src="assets/discount@2x.png" alt="" />
+              <span><bdi>7935 ريال</bdi></span>
+            </li>
             <li><bdi>4700 ريال</bdi></li>
           </ul>
         </div>
@@ -155,6 +232,12 @@
         </div>
       </form>
     </main>
+    <div class="popup-form-result">
+      <img id="closePopup" src="./assets/close-popup@2x.png" alt="" />
+      <img class="success-logo" src="./assets/success-logo@2x.png" alt="" />
+      <p>تم التسجيل بنجاح</p>
+      <small>جاري تحويلك لاستكمال الحجز...</small>
+    </div>
     <img class="background" src="./assets/background.png" alt="" />
     <script>
       const noCacheHeaders = {
@@ -166,16 +249,6 @@
         "Surrogate-Control": "no-store",
       };
 
-      /**
-       * Sends a GET request to the specified URL and returns the response data.
-       *
-       * @param {string} url - The URL to send the request to.
-       * @param {boolean} isJson - Whether the response data should be parsed as JSON.
-       * @param {object} [options={}] - Additional options for the request.
-       * @param {*} [fallBack] - A fallback value to return if the request fails.
-       *
-       * @returns {Promise<string|object>} The response data, either as a string or a JSON object.
-       */
       async function fetchWithCheck(url, isJson, options = {}, fallBack) {
         try {
           const response = await fetch(url, {
@@ -224,7 +297,8 @@
       }
 
       const form = document.querySelector("form");
-
+      const closePopup = document.querySelector("#closePopup");
+      const resultPopup = document.querySelector(".popup-form-result");
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -234,26 +308,47 @@
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
         try {
-          const result = await fetchWithCheck(
-            "http://myserverhost-001-site2.dtempurl.com/api/Camps",
-            null,
-            {
-              method: "POST",
-              body: {
-                id: 0, // TODO: fix this
-                name: name,
-                email: email,
-                education: education,
-                phoneNumber: phone,
-                typeCourse: attendance,
-                createdCode: new Date().toISOString(), // TODO: fix this
-              },
-            }
-          );
-          console.log(result);
+          // TODO: uncomment 
+
+          // const result = await fetchWithCheck(
+          //   "http://myserverhost-001-site2.dtempurl.com/api/Camps",
+          //   null,
+          //   {
+          //     method: "POST",
+          //     body: {
+          //       id: 0, // TODO: fix this
+          //       name: name,
+          //       email: email,
+          //       education: education,
+          //       phoneNumber: phone,
+          //       typeCourse: attendance,
+          //       createdCode: new Date().toISOString(), // TODO: fix this
+          //     },
+          //   }
+          // );
+          // console.log(result);
+
+          //DEV RETURN
+          // TODO: delete this 
+          const devResult =await new Promise((res, rej) => {
+            setTimeout(() => {
+              res("https://www.google.com/");
+            }, 2000);
+          });
+
+          resultPopup.style.display = "flex";
+          const redirectTimeOut = setTimeout(() => {
+            // TODO: update devResult to result
+            window.location = devResult;
+            return clearTimeout(redirectTimeOut);
+          }, 3000);
         } catch (err) {
           console.log(err);
         }
+      });
+
+      closePopup.addEventListener("click", () => {
+        resultPopup.style.display = "none";
       });
     </script>
   </body>

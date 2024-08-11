@@ -306,6 +306,13 @@
             list-style: none;
             padding-left: 60px;
             white-space: nowrap;
+            position: relative;
+            img{
+              position: absolute;
+              width: 40px;
+              bottom: 17px;
+              right: 40px;
+            }
           }
           li:nth-child(2) {
             border-top: 1px solid #f5bd2d;
@@ -367,6 +374,36 @@
     left: 0;
     object-fit: cover;
     z-index: -1;
+  }
+  >.popup-form-result{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    padding: 50px;
+    border-radius: 25px;
+    z-index: 999999;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    background-color: #CCCCCC;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    font-weight: bold;
+    color: #333333;
+    .success-logo{
+      width: 200px;
+    }
+    #closePopup{
+      width: 25px;
+      left: 20px;
+      cursor: pointer;
+      top: 20px;
+      position: absolute;
+    }
   }
   .my-20 {
     padding-top: 80px;
