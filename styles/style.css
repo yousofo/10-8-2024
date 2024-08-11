@@ -298,7 +298,7 @@
 .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   gap: 10px;
 }
 @media screen and (min-width: 640px) {
@@ -307,7 +307,7 @@
   }
 }
 .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div img {
-  width: 40px;
+  width: 42px;
 }
 .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div:nth-last-child(1) {
   position: relative;
@@ -338,6 +338,10 @@
   display: flex;
   flex-direction: column;
 }
+.cybersecurity-bootcamp main .register-details > div:nth-child(2) h4 {
+  text-align: center;
+  font-size: 20px;
+}
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) ul {
   background-color: #43004f;
   border-radius: 24px;
@@ -345,15 +349,21 @@
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) ul li {
   padding: 20px;
   list-style: none;
-  padding-left: 60px;
   white-space: nowrap;
   position: relative;
+  line-height: 1;
+  font-size: 26px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cybersecurity-bootcamp main .register-details > div:nth-child(2) ul li span span {
+  font-size: 18px;
 }
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) ul li img {
   position: absolute;
   width: 40px;
-  bottom: 17px;
-  right: 40px;
+  bottom: 15px;
+  right: 66px;
 }
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) ul li:nth-child(2) {
   border-top: 1px solid #f5bd2d;

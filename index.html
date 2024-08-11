@@ -134,7 +134,7 @@
       </div>
       <!--  -->
       <div class="title last">
-        <h3>ماذا ستتعلم في المعسكر</h3>
+        <h3>تفاصيل المعسكر</h3>
       </div>
       <!-- details -->
       <section class="register-details my-20">
@@ -181,9 +181,15 @@
           <ul>
             <li>
               <img src="assets/discount@2x.png" alt="" />
-              <span><bdi>7935 ريال</bdi></span>
+              <span>
+                <bdi>7935 <span>ريال</span></bdi>
+              </span>
             </li>
-            <li><bdi>4700 ريال</bdi></li>
+            <li>
+              <span>
+                <bdi>4700 <span>ريال</span></bdi>
+              </span>
+            </li>
           </ul>
         </div>
       </section>
@@ -313,7 +319,7 @@
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
         try {
-          TODO: uncomment 
+          TODO: uncomment;
 
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
@@ -334,7 +340,7 @@
           console.log(result);
 
           //DEVELOPMENT only
-          // TODO: remove this 
+          // TODO: remove this
           // const devResult =await new Promise((res, rej) => {
           //   setTimeout(() => {
           //     res("https://www.google.com/");
@@ -351,8 +357,7 @@
           console.log(err);
         }
       });
-      
-      
+
       const closePopupBtn = document.querySelector("#closePopup");
 
       closePopupBtn.addEventListener("click", () => {
