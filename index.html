@@ -354,14 +354,13 @@
         const attendance = document.querySelector("#attendance").value;
 
 
-        
+
         try {
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
             {
               method: "POST",
               body: JSON.stringify({
-                id: 0, // TODO: fix this
                 name: name,
                 email: email,
                 education: education,
