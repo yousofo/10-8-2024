@@ -256,6 +256,12 @@
 .cybersecurity-bootcamp main .sections > section .section-img img {
   width: 100%;
 }
+.cybersecurity-bootcamp main .sections > section .section-img-number {
+  position: absolute;
+  right: -100px;
+  width: 60px;
+  top: 0;
+}
 .cybersecurity-bootcamp main .sections > section:nth-child(odd):not(:first-child) .double-arrow {
   display: block;
   transform: scaleX(-1) translate(-50%, -50%);

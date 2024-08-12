@@ -287,6 +287,12 @@
           background-color: #161521;
           transform: translate(-50%, -50%);
         }
+        .section-img-number{
+          position: absolute;
+          right: -100px;
+          width: 60px;
+          top: 0;
+        }
       }
       > section:nth-child(odd):not(:first-child) {
         .double-arrow {
