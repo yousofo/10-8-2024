@@ -265,7 +265,7 @@
 .cybersecurity-bootcamp main .sections > section:nth-child(odd):not(:first-child) .double-arrow {
   display: block;
   transform: scaleX(-1) translate(-50%, -50%);
-  animation: moveAlongBorder 5s 3s linear infinite;
+  animation: moveAlongBorder 5s linear infinite;
 }
 .cybersecurity-bootcamp main .sections > section:nth-child(odd)::before {
   width: 50%;
