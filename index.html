@@ -352,12 +352,21 @@
         const education = document.querySelector("#education").value;
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
+        console.log({
+          id: 0, // TODO: fix this
+          name: name,
+          email: email,
+          education: education,
+          phoneNumber: phone,
+          typeCourse: attendance,
+          createdCode: new Date().toISOString(), // TODO: fix this
+        });
         try {
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
             {
               method: "POST",
-              body: {
+              body: JSON.stringify({
                 id: 0, // TODO: fix this
                 name: name,
                 email: email,
@@ -365,7 +374,7 @@
                 phoneNumber: phone,
                 typeCourse: attendance,
                 createdCode: new Date().toISOString(), // TODO: fix this
-              },
+              }),
             }
           );
           console.log(result);
@@ -378,7 +387,7 @@
           //   }, 2000);
           // });
 
-          resultPopup.classList.remove("failure")
+          resultPopup.classList.remove("failure");
           resultPopup.style.display = "flex";
 
           const redirectTimeOut = setTimeout(() => {
@@ -386,11 +395,13 @@
             return clearTimeout(redirectTimeOut);
           }, 3000);
         } catch (err) {
-          const popUpMessageContainer = document.querySelector(".popup-form-result p");
+          const popUpMessageContainer = document.querySelector(
+            ".popup-form-result p"
+          );
 
-          resultPopup.classList.add("failure")
+          resultPopup.classList.add("failure");
           resultPopup.style.display = "flex";
-          popUpMessageContainer.textContent = "حدث خطأ في التسجيل"; 
+          popUpMessageContainer.textContent = "حدث خطأ في التسجيل";
           console.log(err);
         }
       });
