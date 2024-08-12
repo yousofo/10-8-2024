@@ -458,6 +458,12 @@
   font-weight: bold;
   color: #333333;
 }
+.cybersecurity-bootcamp > .popup-form-result.failure .success-logo {
+  display: none;
+}
+.cybersecurity-bootcamp > .popup-form-result.failure small {
+  display: none;
+}
 .cybersecurity-bootcamp > .popup-form-result .success-logo {
   width: 200px;
 }

@@ -287,7 +287,7 @@
           background-color: #161521;
           transform: translate(-50%, -50%);
         }
-        .section-img-number{
+        .section-img-number {
           position: absolute;
           right: -100px;
           width: 60px;
@@ -492,6 +492,14 @@
     justify-content: center;
     font-weight: bold;
     color: #333333;
+    &.failure {
+      .success-logo {
+        display: none;
+      }
+      small {
+        display: none;
+      }
+    }
     .success-logo {
       width: 200px;
     }
