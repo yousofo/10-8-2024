@@ -353,8 +353,6 @@
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
         try {
-          // TODO: uncomment;
-
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
             {
@@ -379,6 +377,7 @@
           //     res("https://www.google.com/");
           //   }, 2000);
           // });
+
           resultPopup.classList.remove("failure")
           resultPopup.style.display = "flex";
 
