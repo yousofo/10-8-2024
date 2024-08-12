@@ -352,15 +352,6 @@
         const education = document.querySelector("#education").value;
         const phone = document.querySelector("#phone").value;
         const attendance = document.querySelector("#attendance").value;
-        console.log({
-          id: 0, // TODO: fix this
-          name: name,
-          email: email,
-          education: education,
-          phoneNumber: phone,
-          typeCourse: attendance,
-          createdCode: new Date().toISOString(), // TODO: fix this
-        });
         try {
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
