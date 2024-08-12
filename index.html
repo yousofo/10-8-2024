@@ -177,7 +177,13 @@
             <div>
               <p>حجز المقعد</p>
               <p>
-                <bdi style="font-size:14px;"><span style="font-size: 27px;font-weight: bolder;line-height: 1;">100</span> ريــــال</bdi>
+                <bdi style="font-size: 14px"
+                  ><span
+                    style="font-size: 27px; font-weight: bolder; line-height: 1"
+                    >100</span
+                  >
+                  ريــــال</bdi
+                >
               </p>
             </div>
             <p>(يتم استكمال باقي مبلغ المعسكر بعد حضور أول محاضرة)</p>
@@ -266,7 +272,7 @@
       };
 
       //custom fetch function with error handling
-      async function fetchWithCheck(url, isJson, options = {}, fallBack) {
+      async function fetchWithCheck(url, options = {}, fallBack) {
         try {
           const response = await fetch(url, {
             cache: "no-cache",
@@ -330,7 +336,6 @@
 
           const result = await fetchWithCheck(
             "https://kh.abadnet.com.sa/api/Camps",
-            null,
             {
               method: "POST",
               body: {
