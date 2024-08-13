@@ -9,6 +9,10 @@
   inherits: false;
   initial-value: 10%;
 }
+html, body {
+  scroll-behavior: smooth !important;
+}
+
 .cybersecurity-bootcamp {
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
@@ -124,6 +128,8 @@
 }
 .cybersecurity-bootcamp main > .title {
   position: relative;
+  text-decoration: none;
+  display: block;
 }
 .cybersecurity-bootcamp main > .title h3 {
   background-color: #9a20aa;
@@ -351,6 +357,7 @@
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 .cybersecurity-bootcamp main .register-details > div:nth-child(2) h4 {
   text-align: center;
