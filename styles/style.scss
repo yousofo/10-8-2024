@@ -420,7 +420,7 @@
     }
     > form {
       display: grid;
-
+      padding-top: 50px;
       @media screen and (min-width: 640px) {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -464,6 +464,27 @@
       }
     }
   }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 50px 0;
+    a{
+      height: 1px;
+      overflow: visible;
+      box-shadow: 0px 0px 18px 2px #ffffff;
+      display: flex;
+      align-items: center;
+      color: white;
+      gap: 5px;
+      svg{
+        width: 25px;
+      }
+    }
+  }
+
   .background {
     position: fixed;
     width: 100%;

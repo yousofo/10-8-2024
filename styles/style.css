@@ -385,6 +385,7 @@
 }
 .cybersecurity-bootcamp main > form {
   display: grid;
+  padding-top: 50px;
   gap: 20px;
 }
 @media screen and (min-width: 640px) {
@@ -427,6 +428,25 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+}
+.cybersecurity-bootcamp footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 0;
+}
+.cybersecurity-bootcamp footer a {
+  height: 1px;
+  overflow: visible;
+  box-shadow: 0px 0px 18px 2px #ffffff;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 5px;
+}
+.cybersecurity-bootcamp footer a svg {
+  width: 25px;
 }
 .cybersecurity-bootcamp .background {
   position: fixed;
