@@ -2,17 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 @property --p {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 10%;
 }
-html,body {
+html,
+body {
   scroll-behavior: smooth !important;
 }
 .cybersecurity-bootcamp {
+  overflow-x: hidden;
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -81,6 +82,12 @@ html,body {
           h2 {
             font-size: 30px;
           }
+        }
+      }
+      .lock-img {
+        width: 100%;
+        @media screen and (min-width: 640px) {
+          display: none;
         }
       }
     }
@@ -229,18 +236,15 @@ html,body {
       }
     }
     .sections {
-      overflow: hidden;
+      // overflow: hidden;
       > section {
         @media screen and (min-width: 1024px) {
           width: calc(100% - 200px);
-        }
-        margin: 0 auto;
-        padding: 40px;
-        padding-left: 100px;
-        @media screen and (min-width: 640px) {
           padding: 50px;
           padding-left: 100px;
         }
+        margin: 0 auto;
+        padding: 40px;
         position: relative;
         border-radius: 100px;
         border: 1px solid transparent;
@@ -274,29 +278,39 @@ html,body {
         }
         .section-img {
           position: absolute;
-          width: 140px;
-          height: 140px;
-          left: 0;
-          top: 50%;
-          display: none;
-          @media screen and (min-width: 1024px) {
-            display: flex;
-          }
+          display: flex;
+
           align-items: center;
+          border: 1px solid #9a20aa;
+          border-radius: 50%;
+          background-color: #161521;
           img {
             width: 100%;
           }
-          border: 1px solid #9a20aa;
-          padding: 20px;
-          border-radius: 50%;
-          background-color: #161521;
+          width: 90px;
+          height: 90px;
+          left: 40px;
+          top: 10px;
           transform: translate(-50%, -50%);
+          padding: 10px;
+          @media screen and (min-width: 1024px) {
+            padding: 20px;
+            width: 140px;
+            height: 140px;
+            left: 0;
+            top: 50% !important;
+          }
         }
         .section-img-number {
           position: absolute;
-          right: -100px;
-          width: 60px;
-          top: 0;
+          top: -40px;
+          right: 0px;
+          width: 30px;
+          @media screen and (min-width: 1024px) {
+            right: -100px;
+            top: 0;
+            width: 60px;
+          }
         }
       }
       > section:nth-child(odd):not(:first-child) {
@@ -322,6 +336,9 @@ html,body {
         .double-arrow {
           display: block;
           animation: moveAlongBorder2 5s ease-in-out infinite;
+        }
+        .section-img {
+          top: 0px;
         }
         &::before {
           width: calc(100% - 100px);
@@ -353,7 +370,7 @@ html,body {
         gap: 20px;
         flex-wrap: wrap;
         > div {
-          @media screen and (min-width: 640px) {
+          @media screen and (min-width: 768px) {
             width: 30%;
           }
           display: flex;
@@ -366,17 +383,17 @@ html,body {
         }
         > div:nth-last-child(1) {
           position: relative;
-          @media screen and (max-width: 400px) {
+          @media screen and (max-width: 639px) {
             > p {
               position: absolute;
               margin-top: 0px !important;
-              left: -5px;
+              left: -10px;
               width: 200px;
 
               transform: translateX(-100%);
             }
           }
-          @media screen and (min-width: 640px) {
+          @media screen and (min-width: 768px) {
             width: max-content;
           }
           > div {
@@ -473,13 +490,13 @@ html,body {
     }
   }
 
-  footer{
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
     padding: 50px 0;
-    a{
+    a {
       height: 1px;
       overflow: visible;
       box-shadow: 0px 0px 18px 2px #ffffff;
@@ -487,7 +504,7 @@ html,body {
       align-items: center;
       color: white;
       gap: 5px;
-      svg{
+      svg {
         width: 25px;
       }
     }

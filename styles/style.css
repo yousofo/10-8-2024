@@ -9,11 +9,13 @@
   inherits: false;
   initial-value: 10%;
 }
-html, body {
+html,
+body {
   scroll-behavior: smooth !important;
 }
 
 .cybersecurity-bootcamp {
+  overflow-x: hidden;
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -95,6 +97,14 @@ html, body {
   }
   .cybersecurity-bootcamp header .right .title h2 {
     font-size: 30px;
+  }
+}
+.cybersecurity-bootcamp header .right .lock-img {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .cybersecurity-bootcamp header .right .lock-img {
+    display: none;
   }
 }
 .cybersecurity-bootcamp header .left {
@@ -187,13 +197,9 @@ html, body {
   bottom: auto !important;
   top: 0 !important;
 }
-.cybersecurity-bootcamp main .sections {
-  overflow: hidden;
-}
 .cybersecurity-bootcamp main .sections > section {
   margin: 0 auto;
   padding: 40px;
-  padding-left: 100px;
   position: relative;
   border-radius: 100px;
   border: 1px solid transparent;
@@ -202,10 +208,6 @@ html, body {
 @media screen and (min-width: 1024px) {
   .cybersecurity-bootcamp main .sections > section {
     width: calc(100% - 200px);
-  }
-}
-@media screen and (min-width: 640px) {
-  .cybersecurity-bootcamp main .sections > section {
     padding: 50px;
     padding-left: 100px;
   }
@@ -242,31 +244,42 @@ html, body {
 }
 .cybersecurity-bootcamp main .sections > section .section-img {
   position: absolute;
-  width: 140px;
-  height: 140px;
-  left: 0;
-  top: 50%;
-  display: none;
+  display: flex;
   align-items: center;
   border: 1px solid #9a20aa;
-  padding: 20px;
   border-radius: 50%;
   background-color: #161521;
+  width: 90px;
+  height: 90px;
+  left: 40px;
+  top: 10px;
   transform: translate(-50%, -50%);
-}
-@media screen and (min-width: 1024px) {
-  .cybersecurity-bootcamp main .sections > section .section-img {
-    display: flex;
-  }
+  padding: 10px;
 }
 .cybersecurity-bootcamp main .sections > section .section-img img {
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .cybersecurity-bootcamp main .sections > section .section-img {
+    padding: 20px;
+    width: 140px;
+    height: 140px;
+    left: 0;
+    top: 50% !important;
+  }
+}
 .cybersecurity-bootcamp main .sections > section .section-img-number {
   position: absolute;
-  right: -100px;
-  width: 60px;
-  top: 0;
+  top: -40px;
+  right: 0px;
+  width: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .cybersecurity-bootcamp main .sections > section .section-img-number {
+    right: -100px;
+    top: 0;
+    width: 60px;
+  }
 }
 .cybersecurity-bootcamp main .sections > section:nth-child(odd):not(:first-child) .double-arrow {
   display: block;
@@ -285,6 +298,9 @@ html, body {
 .cybersecurity-bootcamp main .sections > section:nth-of-type(even) .double-arrow {
   display: block;
   animation: moveAlongBorder2 5s ease-in-out infinite;
+}
+.cybersecurity-bootcamp main .sections > section:nth-of-type(even) .section-img {
+  top: 0px;
 }
 .cybersecurity-bootcamp main .sections > section:nth-of-type(even)::before {
   width: calc(100% - 100px);
@@ -321,7 +337,7 @@ html, body {
   font-size: 16px;
   gap: 10px;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div {
     width: 30%;
   }
@@ -332,16 +348,16 @@ html, body {
 .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div:nth-last-child(1) {
   position: relative;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 639px) {
   .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div:nth-last-child(1) > p {
     position: absolute;
     margin-top: 0px !important;
-    left: -5px;
+    left: -10px;
     width: 200px;
     transform: translateX(-100%);
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .cybersecurity-bootcamp main .register-details > div:nth-child(1) > div:nth-last-child(1) {
     width: -moz-max-content;
     width: max-content;
